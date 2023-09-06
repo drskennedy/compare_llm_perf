@@ -22,9 +22,8 @@ ___
 - To start parsing user queries into the application, launch the terminal from the project directory and run the following command:
 `poetry run python main.py "<user query>"`
 - For example, `poetry run python main.py "What is the minimum guarantee payable by Adidas?"`
-- Note: Omit the prepended `poetry run` if you are NOT using Poetry
-<br><br>
-![Thread Diagram](assets/thread diagram.png)
+<br/>
+![Thread Diagram](assets/thread_diagram.png)
 ___
 ## Tools
 - **LangChain**: Framework for developing applications powered by language models
