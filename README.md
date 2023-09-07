@@ -1,4 +1,4 @@
-#Multithreaded Test Framework for Comparing Local LLM Performance for Document Q&A
+# Multithreaded Test Framework for Comparing Local LLM Performance for Document Q&A
 
 **Step-by-step guide on Medium**: [Comparing LLM Performance](https://medium.com/@heelara/multi-threaded-framework-for-testing-language-models-for-question-answering-664fdd31b111)
 ___
@@ -68,4 +68,5 @@ ___
 ___
 
 ## References
-- https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML
+- https://python.langchain.com/docs/use_cases/question_answering/
+- https://huggingface.co/models?pipeline_tag=text2text-generation
