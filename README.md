@@ -1,10 +1,10 @@
-Multithreaded Test Framework for Comparing Local LLM Performance for Document Q&A
+#Multithreaded Test Framework for Comparing Local LLM Performance for Document Q&A
 
-**Step-by-step guide on TowardsDataScience**: 
+**Step-by-step guide on Medium**: [Comparing LLM Performance](https://medium.com/@heelara/multi-threaded-framework-for-testing-language-models-for-question-answering-664fdd31b111)
 ___
 ## Context
-Even through there are third-party commercial large language model (LLM) providers like OpenAI's GPT4 have made it easy to access LLM use via simple API calls, privacy-conscious researchers and engineers are looking to deploy a fully local model to allow querying against their local documents. The proliferation of open-source LLMs is providing us with many options, which may be daunting.
-In this project, we will introduce  a multithreaded test framework and code to more objectively query and compare the models to find the best LLM for our constraints.
+Even through there are third-party commercial large language model (LLM) providers like OpenAI's GPT4 have made it easy to access LLM via simple API calls, privacy-conscious researchers and engineers are looking to deploy a fully local model to allow querying against their local documents to main their intellectual properties with their walls. The proliferation of open-source LLMs is providing us with many options, which may be daunting.
+In this project, we will introduce a multithreaded test framework and the associated code to more objectively compare the models to find the best LLM for our constraints.
 <br><br>
 ![Thread Diagram](/assets/thread_diagram.png)
 ___
@@ -15,19 +15,21 @@ $ python3.10 -m venv mychat
 $ source mychat/bin/activate
 ```
 - Install libraries:
-`$ pip -r requirements`
-- Download one or more models (text2textgeneration) to the models directory manually or using `download_model.py`, as shown:
+```
+$ pip install -r requirements.txt
+```
+- Download one or more models (`text2textgeneration`) to directory `models` manually or using script `download_model.py`. For instance, to download files of 'declare-lab/flan-alpaca-base', it can be launched like this:
 ```
 $ python download_model.py 'declare-lab/flan-alpaca-base' alpaca_base
 ```
-- Ensure the data structure list models in main.py reflects the models that you have downloaded.
-- Run the main.py to start the testing:
+- Ensure the data structure list models in `main.py` reflects the models that you have downloaded.
+- Run script `main.py` to start the testing:
 ```
 $ python main.py
 ```
 ___
 ## Quickstart
-- To started the app, launch terminal from the project directory and run the following command:
+- To start the app, launch terminal from the project directory and run the following command:
 ```
 $ source mychat/bin/activate
 $ python main.py
@@ -48,13 +50,11 @@ alpaca_base;9;0.49714;1.52;1.94;121.80
 alpaca_base;10;0.59772;1.69;1.94;125.30
 ...
 ```
-<br><br>
-![Thread Diagram](assets/thread_diagram.png)
 ___
 ## Tools
 - **LangChain**: Framework for developing applications powered by language models
 - **FAISS**: Open-source library for efficient similarity search and clustering of dense vectors.
-- **Sentence-Transformers (all-MiniLM-L6-v2)**: Open-source pre-trained transformer model for embedding text to a 384-dimensional dense vector space for tasks like cosine similarity calculation.
+- **Sentence-Transformers (all-MiniLM-L6-v2)**: Open-source pre-trained transformer model for embedding text to a dense vector space for tasks like cosine similarity calculation.
 
 ___
 ## Files and Content
